@@ -1,0 +1,29 @@
+.profile-wrap{
+    position: fixed;
+    top: 0%;
+    bottom: 0%;
+   
+
+}
+.profile-drop-down{
+    margin-top: 70px;
+
+    border: 1px solid black;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    border-radius: 18px;
+    width: 130px;
+
+}
+.profile-drop-down li{
+    margin-top: 20px;
+    list-style: none;
+     
+    padding: 10px;
+    background-color: rgb(252, 252, 252);
+    border-radius: 2cm;
+    cursor: pointer;
+}
+
+.profile-drop-down ul :hover{
+    background-color: rgb(206, 199, 199);
+}

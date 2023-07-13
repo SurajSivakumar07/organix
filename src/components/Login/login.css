@@ -1,0 +1,57 @@
+.login-wrap-main{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    /* background-color: purple; */
+   
+
+}
+.login{
+    width: 400px;
+    height: 400px;
+    border: 2px solid black;
+    text-align: center;
+    margin: auto;
+    /* margin-top: 6%; */
+    /* padding-top: 40px; */
+    position: fixed;
+    top: 0;
+    right: 35%; 
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    margin-top: 15%;
+    transition: width 2s, height 4s;
+    /* z-index: 1; */
+}
+
+.login-wrap{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+ 
+.login-wrap h1{
+    font-family: 'Poppins', sans-serif;
+}
+.fromInput{
+    margin-top: 30px;
+}
+.fromInput input{
+    width: 350px;
+    height: 40px;
+    margin-top: 20px;
+    border: 0.5px solid black;
+    padding-left: 20px;
+     
+    
+}
+
+.login h3{
+    margin-top: 20px;
+}
+
+#login-btn{
+    background-color: rgb(199, 76, 76);
+}
+

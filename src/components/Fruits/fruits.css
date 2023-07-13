@@ -1,0 +1,261 @@
+.nav-wrap{
+   
+    /* font-family: 'Poppins', sans-serif; */
+}
+ 
+.searchBar{
+    display: flex;
+}
+
+.searchBar select{
+    padding: 5px 5px 5px 5px;
+    border: none;
+    border-radius:5px;
+    
+}
+.searchBar i{
+    margin-top: 16px;
+     color: red;
+}
+.nav-content {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 20px;
+}
+
+
+.Account{
+    display: flex;
+    margin-top: 10px;
+}
+
+.Account h3{
+    margin-left: 10px;
+}
+
+.title{
+    font-family: cursive;
+
+}
+.title span{
+    color: red;
+} 
+/* input  */
+
+ 
+.searchBar input{
+     /* padding: 10px 60px 20px 120px;  */
+     width: 300px;
+     height: 45px;
+    border-radius:5px;
+    border: 0.5px solid;
+    margin-left: 10px;
+    padding-left: 10px;
+    position: relative;
+}
+
+#serach-icon{
+    position: absolute;
+    left: 62%;
+    font-size: 20px;
+    opacity: 0.5;
+     top: 2%;
+ 
+}
+.nav-content a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Options */
+
+.path{
+    margin-top: 20px;
+    text-align: center;
+
+    opacity: 0.5;
+}
+
+.optionContent{
+    display: flex;
+
+  
+    padding-left: 12%;
+    /* border-bottom: 0.5px dashed black; */
+    padding-bottom: 10px;
+
+    /* border-bottom: 2px dashed black; */
+    /* justify-content: center; */
+    align-items: center;
+
+     
+}
+.option-delivery{
+    margin-top: 15px;
+    margin-left: 10px;
+    font-size: 40px;
+    /* font-family: 'Poppins', sans-serif;
+     */
+     font-family: cursive;
+    /* border-bottom: 2px dashed red; */
+    /* width: 200px; */
+    display: flex;
+}
+.option-delivery p{
+    margin-left: 10px;
+    cursor: pointer;
+}
+#fruits{
+    color: red;
+    border-bottom:2px solid red;
+}
+.option-logo img{
+    border-radius: 2cm;
+    /* background-color: yellow; */
+    width: 50px;
+    height:50px;
+    margin-top: 20px;
+    /* border:2px  dashed  red; */
+
+    
+}
+.optionContent i{
+        font-size: 60px;
+        color: black(231, 95, 95);
+        margin-top:10px;
+        margin-left: 20px;
+        transform: rotate(-30deg);
+    
+}
+
+/* Sliders */
+ 
+.slider-wrap{
+    display: flex;
+    justify-content: space-evenly;
+    /* height: 60vh; */
+
+}
+
+.slider-wrap p{
+    margin-left: 90px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+.slider-wrap img{
+
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin-left: 20px;
+
+    transition: width 2s, height 2s, transform 2s;
+    /* transition:5s; */
+
+    margin-top: 30px;
+
+    cursor: pointer;
+
+
+}
+.Slider-text{
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+ 
+.slider-wrap img:hover{
+
+   
+    /* width: 300px; */
+    /* height: 300px; */
+    transform: rotate(180deg);
+ }
+
+ /* Displaying */
+ #displayTitle{
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Poppins', sans-serif;
+ }
+
+ .displayFruits img{
+    width: 200px;
+    height: 200px;
+    border-radius: 2cm;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 1s;
+    /* border: 2px solid black; */
+ }
+.displayImageWrap img:hover {
+    transform: scale(2);
+}
+ .displayFruits{
+    display: grid;
+    grid-template-columns: auto auto  auto auto ;
+    border: 2px solid white;
+    /* padding: 5px; */
+    width: 100%;
+    margin-left: 5%;
+    /* padding-le: 10px; */
+
+
+ }
+ .displayImageWrap{
+
+    /* border: 2px solid black; */
+    /* margin-left: 40px; */
+    margin-top: 20px;
+    /* border: 2px solid black; */
+    padding: 20px;
+    width: 250px;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+ }
+ 
+ .dipslay-image-text{
+    margin-left: 40px;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+ }
+
+ .dipslay-image-text p {
+     margin-left: 20px;
+ }
+
+/* Hambuger */
+.hambuger-wrap{
+    border: 1px solid white;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+.hello-content{
+    font-family: cursive;
+    font-size: 20px;
+}
+.nav-cart{
+    margin-left: 40px;
+}.nav-cart i{
+    font-size: 20px;
+    margin-top: 9px;
+
+}
+.profile i{
+    /* background-color: black;  */
+    
+    margin-left: 30px;
+    border-radius: 50%;
+    border: 2px dashed black;
+    padding: 5px;
+    font-size: 20px;
+}
