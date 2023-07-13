@@ -61,7 +61,7 @@ export default function Apple() {
 
   return (
     <>
-      <p> {named}</p>
+      <Nav />
 
       {final ? (
         <div className="seller-display-wrap">

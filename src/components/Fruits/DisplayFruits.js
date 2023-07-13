@@ -3,10 +3,11 @@ import React, { useContext } from "react";
 import { data } from "./FruitsData";
 
 import "./fruits.css";
-import { SearchContext } from "../Context";
+import { SearchContext, UserContext } from "../Context";
 import { useNavigate } from "react-router";
 export default function DisplayFruits() {
-  const [search, setSearch] = useContext(SearchContext);
+  // const [search, setSearch] = useContext(SearchContext);
+  const { name, setName, search, setSearch } = useContext(UserContext);
 
   console.log(search);
 

@@ -1,5 +1,6 @@
 import React from "react";
 import "./fruits.css";
+import { Link } from "react-router-dom";
 export default function Options() {
   return (
     <>
@@ -16,8 +17,12 @@ export default function Options() {
             {/* <i class="fa-solid fa-motorcycle"></i> */}
           </div>
           <div className="option-delivery">
-            <p id="fruits">Fruits</p>
-            <p>Veggies</p>
+            <Link to="/fruits">
+              <p id="fruits">Fruits</p>
+            </Link>
+            <Link to="/veggies">
+              <p>Veggies</p>
+            </Link>
           </div>
         </div>
       </div>

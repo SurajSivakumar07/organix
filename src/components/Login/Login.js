@@ -3,7 +3,11 @@ import React, { useContext, useState } from "react";
 import "./login.css";
 import { UserContext } from "../Context";
 export default function Login(props) {
-  const [name, setName] = useContext(UserContext);
+  // const [name, setName] = useContext(UserContext);
+  // const { val, val2 } = useContext(UserContext);
+  // const [name, setName] = val;
+
+  const { name, setName, dup1, dup2 } = useContext(UserContext);
   const loginFormHandler = (e) => {
     e.preventDefault();
 

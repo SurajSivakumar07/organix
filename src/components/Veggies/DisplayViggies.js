@@ -1,27 +1,26 @@
-import React from 'react'
-import { data } from './VeggiesData'
+import React from "react";
+import { data } from "./VeggiesData";
 export default function DisplayViggies() {
-
   return (
     <>
-
-    {
-        data.map((items)=>
-
-            <div className='display-image-wrap' key={items.id}>
-    
-                <img src={items.photo_url}/>
-                <div className='dipslay-image-text-veggie' >
-
-                <h1>Name:{items.name}</h1>
-                
-                </div>
-                   
-
+      <div className="displayFruits">
+        {data.map((items) => (
+          <>
+            <div
+              className="displayImageWrap"
+              key={items.id}
+              // onClick={() => {
+              //   navigation("/fruits/" + items.name.toLowerCase());
+              // }}
+            >
+              <img src={items.img} />
+              <div className="dipslay-image-text">
+                <h1>{items.name}</h1>
+              </div>
             </div>
-        )
-    }
-      
+          </>
+        ))}
+      </div>
     </>
-  )
+  );
 }

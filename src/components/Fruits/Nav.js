@@ -16,9 +16,16 @@ export default function Nav() {
   const [tab, setTab] = useState(false);
 
   //userContext
-  const [name, setName] = useContext(UserContext);
 
-  const [search, setSearch] = useContext(SearchContext);
+  //orignal
+  // const [name, setName] = useContext(UserContext);
+
+  const { name, setName, search, setSearch } = useContext(UserContext);
+
+  //search
+  // const [search, setSearch] = useContext(SearchContext);
+
+  // const [search, setSearch] = val2;
 
   const signinHandle = () => {
     setTrigger(true);
@@ -39,7 +46,9 @@ export default function Nav() {
         <div className="nav-content">
           <div className="title">
             <h1>
-              <span> Farm</span> House
+              <Link to="/fruits">
+                <span> Farm</span> House
+              </Link>
             </h1>
           </div>
 

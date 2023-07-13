@@ -13,10 +13,18 @@ import Cart from "./Cart/Cart";
 
 export default function App() {
   const [name, setName] = useState(false);
+  const [search, setSearch] = useState("");
 
+  const routingDetail = {
+    name: name,
+    setName: setName,
+    search: search,
+    setSearch: setSearch,
+  };
   return (
     <>
-      <UserContext.Provider value={[name, setName]}>
+      {/* <UserContext.Provider value={[name, setName]}> */}
+      <UserContext.Provider value={routingDetail}>
         <Routes>
           <Route path="/sigin" element={<Login />} />
           <Route path="/" element={<FrontPage />} />

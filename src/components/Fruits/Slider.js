@@ -2,10 +2,12 @@ import React, { useContext, useEffect } from "react";
 import { fruitsData } from "./Data";
 
 import "./fruits.css";
-import { SearchContext } from "../Context";
+import { SearchContext, UserContext } from "../Context";
 import { useNavigate } from "react-router";
 export default function Slider() {
-  const [search, setSearch] = useContext(SearchContext);
+  //  const [search, setSearch] = useContext(SearchContext);
+  const { name, setName, search, setSearch } = useContext(UserContext);
+
   const navigate = useNavigate();
   return (
     <>
