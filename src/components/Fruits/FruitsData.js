@@ -332,229 +332,229 @@ export const data = [
       protein: 0,
     },
   },
-  // {
-  //   "name": "Melon",
-  //   "id": 41,
-  //   "family": "Cucurbitaceae",
-  //   "order": "Cucurbitaceae",
-  //   "genus": "Cucumis",
-  //   "nutritions": {
-  //     "calories": 34,
-  //     "fat": 0,
-  //     "sugar": 8,
-  //     "carbohydrates": 8,
-  //     "protein": 0
-  //   }
-  // },
-  // {
-  //   "name": "Tangerine",
-  //   "id": 77,
-  //   "family": "Rutaceae",
-  //   "order": "Sapindales",
-  //   "genus": "Citrus",
-  //   "nutritions": {
-  //     "calories": 45,
-  //     "fat": 0.4,
-  //     "sugar": 9.1,
-  //     "carbohydrates": 8.3,
-  //     "protein": 0
-  //   }
-  // },
-  // {
-  //   "name": "Pitahaya",
-  //   "id": 78,
-  //   "family": "Cactaceae",
-  //   "order": "Caryophyllales",
-  //   "genus": "Cactaceae",
-  //   "nutritions": {
-  //     "calories": 36,
-  //     "fat": 0.4,
-  //     "sugar": 3,
-  //     "carbohydrates": 7,
-  //     "protein": 1
-  //   }
-  // },
-  // {
-  //   "name": "Lime",
-  //   "id": 44,
-  //   "family": "Rutaceae",
-  //   "order": "Sapindales",
-  //   "genus": "Citrus",
-  //   "nutritions": {
-  //     "calories": 25,
-  //     "fat": 0.1,
-  //     "sugar": 1.7,
-  //     "carbohydrates": 8.4,
-  //     "protein": 0.3
-  //   }
-  // },
-  // {
-  //   "name": "Pomegranate",
-  //   "id": 79,
-  //   "family": "Lythraceae",
-  //   "order": "Myrtales",
-  //   "genus": "Punica",
-  //   "nutritions": {
-  //     "calories": 83,
-  //     "fat": 1.2,
-  //     "sugar": 13.7,
-  //     "carbohydrates": 18.7,
-  //     "protein": 1.7
-  //   }
-  // },
-  // {
-  //   "name": "Dragonfruit",
-  //   "id": 80,
-  //   "family": "Cactaceae",
-  //   "order": "Caryophyllales",
-  //   "genus": "Selenicereus",
-  //   "nutritions": {
-  //     "calories": 60,
-  //     "fat": 1.5,
-  //     "sugar": 8,
-  //     "carbohydrates": 9,
-  //     "protein": 9
-  //   }
-  // },
-  // {
-  //   "name": "Grape",
-  //   "id": 81,
-  //   "family": "Vitaceae",
-  //   "order": "Vitales",
-  //   "genus": "Vitis",
-  //   "nutritions": {
-  //     "calories": 69,
-  //     "fat": 0.16,
-  //     "sugar": 16,
-  //     "carbohydrates": 18.1,
-  //     "protein": 0.72
-  //   }
-  // },
-  // {
-  //   "name": "Morus",
-  //   "id": 82,
-  //   "family": "Moraceae",
-  //   "order": "Rosales",
-  //   "genus": "Morus",
-  //   "nutritions": {
-  //     "calories": 43,
-  //     "fat": 0.39,
-  //     "sugar": 8.1,
-  //     "carbohydrates": 9.8,
-  //     "protein": 1.44
-  //   }
-  // },
-  // {
-  //   "name": "Feijoa",
-  //   "id": 76,
-  //   "family": "Myrtaceae",
-  //   "order": "Myrtoideae",
-  //   "genus": "Sellowiana",
-  //   "nutritions": {
-  //     "calories": 44,
-  //     "fat": 0.4,
-  //     "sugar": 3,
-  //     "carbohydrates": 8,
-  //     "protein": 0.6
-  //   }
-  // },
-  // {
-  //   "name": "Avocado",
-  //   "id": 84,
-  //   "family": "Lauraceae",
-  //   "order": "Laurales",
-  //   "genus": "Persea",
-  //   "nutritions": {
-  //     "calories": 160,
-  //     "fat": 14.66,
-  //     "sugar": 0.66,
-  //     "carbohydrates": 8.53,
-  //     "protein": 2
-  //   }
-  // },
-  // {
-  //   "name": "Kiwifruit",
-  //   "img":"https://firebasestorage.googleapis.com/v0/b/socail-meda.appspot.com/o/Kiwi.jpeg?alt=media&token=2eb01e8a-5fe4-424f-9062-e61ed94b5117",
-  //   "id": 85,
-  //   "family": "Actinidiaceae",
-  //   "order": "Ericales",
-  //   "genus": "Actinidia",
-  //   "nutritions": {
-  //     "calories": 61,
-  //     "fat": 0.5,
-  //     "sugar": 8.9,
-  //     "carbohydrates": 14.6,
-  //     "protein": 1.14
-  //   }
-  // },
-  // {
-  //   "name": "Cranberry",
-  //   "id": 87,
-  //   "family": "Ericaceae",
-  //   "order": "Ericales",
-  //   "genus": "Vaccinium",
-  //   "nutritions": {
-  //     "calories": 46,
-  //     "fat": 0.1,
-  //     "sugar": 4,
-  //     "carbohydrates": 12.2,
-  //     "protein": 0.4
-  //   }
-  // },
-  // {
-  //   "name": "Cherry",
-  //   "id": 9,
-  //   "family": "Rosaceae",
-  //   "order": "Rosales",
-  //   "genus": "Prunus",
-  //   "nutritions": {
-  //     "calories": 50,
-  //     "fat": 0.3,
-  //     "sugar": 8,
-  //     "carbohydrates": 12,
-  //     "protein": 1
-  //   }
-  // },
-  // {
-  //   "name": "Peach",
-  //   "id": 86,
-  //   "family": "Rosaceae",
-  //   "order": "Rosales",
-  //   "genus": "Prunus",
-  //   "nutritions": {
-  //     "calories": 39,
-  //     "fat": 0.25,
-  //     "sugar": 8.4,
-  //     "carbohydrates": 9.5,
-  //     "protein": 0.9
-  //   }
-  // },
-  // {
-  //   "name": "Jackfruit",
-  //   "id": 94,
-  //   "family": "Moraceae",
-  //   "order": "Rosales",
-  //   "genus": "Artocarpus",
-  //   "nutritions": {
-  //     "calories": 95,
-  //     "fat": 0,
-  //     "sugar": 19.1,
-  //     "carbohydrates": 23.2,
-  //     "protein": 1.72
-  //   }
-  // },
-  // {
-  //   "name": "Horned Melon",
-  //   "id": 95,
-  //   "family": "Cucurbitaceae",
-  //   "order": "Cucurbitales",
-  //   "genus": "Cucumis",
-  //   "nutritions": {
-  //     "calories": 44,
-  //     "fat": 1.26,
-  //     "sugar": 0.5,
-  //     "carbohydrates": 7.56,
-  //     "protein": 1.78
-  //   }
-  // }
+  {
+    name: "Melon",
+    id: 41,
+    family: "Cucurbitaceae",
+    order: "Cucurbitaceae",
+    genus: "Cucumis",
+    nutritions: {
+      calories: 34,
+      fat: 0,
+      sugar: 8,
+      carbohydrates: 8,
+      protein: 0,
+    },
+  },
+  {
+    name: "Tangerine",
+    id: 77,
+    family: "Rutaceae",
+    order: "Sapindales",
+    genus: "Citrus",
+    nutritions: {
+      calories: 45,
+      fat: 0.4,
+      sugar: 9.1,
+      carbohydrates: 8.3,
+      protein: 0,
+    },
+  },
+  {
+    name: "Pitahaya",
+    id: 78,
+    family: "Cactaceae",
+    order: "Caryophyllales",
+    genus: "Cactaceae",
+    nutritions: {
+      calories: 36,
+      fat: 0.4,
+      sugar: 3,
+      carbohydrates: 7,
+      protein: 1,
+    },
+  },
+  {
+    name: "Lime",
+    id: 44,
+    family: "Rutaceae",
+    order: "Sapindales",
+    genus: "Citrus",
+    nutritions: {
+      calories: 25,
+      fat: 0.1,
+      sugar: 1.7,
+      carbohydrates: 8.4,
+      protein: 0.3,
+    },
+  },
+  {
+    name: "Pomegranate",
+    id: 79,
+    family: "Lythraceae",
+    order: "Myrtales",
+    genus: "Punica",
+    nutritions: {
+      calories: 83,
+      fat: 1.2,
+      sugar: 13.7,
+      carbohydrates: 18.7,
+      protein: 1.7,
+    },
+  },
+  {
+    name: "Dragonfruit",
+    id: 80,
+    family: "Cactaceae",
+    order: "Caryophyllales",
+    genus: "Selenicereus",
+    nutritions: {
+      calories: 60,
+      fat: 1.5,
+      sugar: 8,
+      carbohydrates: 9,
+      protein: 9,
+    },
+  },
+  {
+    name: "Grape",
+    id: 81,
+    family: "Vitaceae",
+    order: "Vitales",
+    genus: "Vitis",
+    nutritions: {
+      calories: 69,
+      fat: 0.16,
+      sugar: 16,
+      carbohydrates: 18.1,
+      protein: 0.72,
+    },
+  },
+  {
+    name: "Morus",
+    id: 82,
+    family: "Moraceae",
+    order: "Rosales",
+    genus: "Morus",
+    nutritions: {
+      calories: 43,
+      fat: 0.39,
+      sugar: 8.1,
+      carbohydrates: 9.8,
+      protein: 1.44,
+    },
+  },
+  {
+    name: "Feijoa",
+    id: 76,
+    family: "Myrtaceae",
+    order: "Myrtoideae",
+    genus: "Sellowiana",
+    nutritions: {
+      calories: 44,
+      fat: 0.4,
+      sugar: 3,
+      carbohydrates: 8,
+      protein: 0.6,
+    },
+  },
+  {
+    name: "Avocado",
+    id: 84,
+    family: "Lauraceae",
+    order: "Laurales",
+    genus: "Persea",
+    nutritions: {
+      calories: 160,
+      fat: 14.66,
+      sugar: 0.66,
+      carbohydrates: 8.53,
+      protein: 2,
+    },
+  },
+  {
+    name: "Kiwifruit",
+    img: "https://firebasestorage.googleapis.com/v0/b/socail-meda.appspot.com/o/Kiwi.jpeg?alt=media&token=2eb01e8a-5fe4-424f-9062-e61ed94b5117",
+    id: 85,
+    family: "Actinidiaceae",
+    order: "Ericales",
+    genus: "Actinidia",
+    nutritions: {
+      calories: 61,
+      fat: 0.5,
+      sugar: 8.9,
+      carbohydrates: 14.6,
+      protein: 1.14,
+    },
+  },
+  {
+    name: "Cranberry",
+    id: 87,
+    family: "Ericaceae",
+    order: "Ericales",
+    genus: "Vaccinium",
+    nutritions: {
+      calories: 46,
+      fat: 0.1,
+      sugar: 4,
+      carbohydrates: 12.2,
+      protein: 0.4,
+    },
+  },
+  {
+    name: "Cherry",
+    id: 9,
+    family: "Rosaceae",
+    order: "Rosales",
+    genus: "Prunus",
+    nutritions: {
+      calories: 50,
+      fat: 0.3,
+      sugar: 8,
+      carbohydrates: 12,
+      protein: 1,
+    },
+  },
+  {
+    name: "Peach",
+    id: 86,
+    family: "Rosaceae",
+    order: "Rosales",
+    genus: "Prunus",
+    nutritions: {
+      calories: 39,
+      fat: 0.25,
+      sugar: 8.4,
+      carbohydrates: 9.5,
+      protein: 0.9,
+    },
+  },
+  {
+    name: "Jackfruit",
+    id: 94,
+    family: "Moraceae",
+    order: "Rosales",
+    genus: "Artocarpus",
+    nutritions: {
+      calories: 95,
+      fat: 0,
+      sugar: 19.1,
+      carbohydrates: 23.2,
+      protein: 1.72,
+    },
+  },
+  {
+    name: "Horned Melon",
+    id: 95,
+    family: "Cucurbitaceae",
+    order: "Cucurbitales",
+    genus: "Cucumis",
+    nutritions: {
+      calories: 44,
+      fat: 1.26,
+      sugar: 0.5,
+      carbohydrates: 7.56,
+      protein: 1.78,
+    },
+  },
 ];

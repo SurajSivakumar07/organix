@@ -1,0 +1,29 @@
+.review-main-wrap {
+    margin-bottom: 90px;
+
+}
+
+.review-wrap{
+    display: flex;
+
+    justify-content: space-evenly;
+}
+.review-slider{
+    border: 2px solid white;
+    padding: 10px;
+    height: 300px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+
+}
+.review-main-wrap h1{
+    display: flex;
+    justify-content: center;
+   font-family: 'Poppins', sans-serif;
+   margin-bottom: 20px;
+       
+}

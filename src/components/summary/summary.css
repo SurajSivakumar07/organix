@@ -1,0 +1,26 @@
+
+.summary-wrap{
+    margin-bottom: 30px;
+}
+.summary-content{
+     
+    padding: 50px;
+}
+.summary-wrap h1{
+    
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+summary{
+    border: 2px solid blacks;
+    
+    height: 50px;
+    border: 0.5px solid black;
+    padding: 15px;
+    margin-top: 20px;
+    padding-bottom: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+}
+ 
+ 

@@ -1,15 +1,21 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import { data } from "./FruitsData";
 
 import "./fruits.css";
 import { SearchContext, UserContext } from "../Context";
 import { useNavigate } from "react-router";
+import { useDispatch, useSelector } from "react-redux";
+import { setProducts } from "../../Redux/actions/action";
 export default function DisplayFruits() {
   // const [search, setSearch] = useContext(SearchContext);
   const { name, setName, search, setSearch } = useContext(UserContext);
 
+  const [val, setVal] = useState();
+
   console.log(search);
+
+  const dispatch = useDispatch();
 
   const navigation = useNavigate();
 

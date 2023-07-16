@@ -1,0 +1,16 @@
+.cart-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.cart-wrap .display-sellers-wrap{
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#cart-text{
+    height: 100vh;
+}

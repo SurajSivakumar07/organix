@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { useContext } from "react";
 import { UserContext } from "../Context";
+import { useDispatch, useSelector } from "react-redux";
+import { checkLogin } from "../../Redux/actions/action";
+
 // import "./login.css"
 export default function Signup(props) {
   // const [name, yup] = useContext(UserContext);
@@ -8,13 +11,18 @@ export default function Signup(props) {
   const { name, setName, dup1, dup2 } = useContext(UserContext);
 
   const [user, setUser] = useState();
+
+  const dispatch = useDispatch();
+
   const signupHandler = (e) => {
     e.preventDefault();
     setName(true);
-    console.log("True");
+    dispatch(checkLogin(true));
 
     localStorage.setItem("name", user);
   };
+
+  const prod = useSelector((state) => state.isLoggedIn);
 
   return props.trigger ? (
     <>

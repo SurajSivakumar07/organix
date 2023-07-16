@@ -1,7 +1,8 @@
 export const data = [
   {
     name: "Broccoli",
-    photo_url: "https://thumbs.dreamstime.com/b/broccoli-13465107.jpg?w=1200",
+    photo_url:
+      "https://t4.ftcdn.net/jpg/01/38/59/65/240_F_138596528_dG7J8xrEXROzGkE0PCgKjDWyclYUWfzz.jpg",
     quantity: "One Unit",
     id: 2,
     price: 30,
@@ -97,13 +98,6 @@ export const data = [
       "https://c4.wallpaperflare.com/wallpaper/968/704/914/radish-vegetable-ripe-wallpaper-preview.jpg",
     quantity: "One container",
     id: 24,
-    price: 80,
-  },
-  {
-    name: "Sweet potato",
-    photo_url: "",
-    quantity: "One container",
-    id: 25,
     price: 80,
   },
 ];

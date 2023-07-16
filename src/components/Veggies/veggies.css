@@ -1,0 +1,80 @@
+/* Slide */
+#veggie-top{
+    display: flex;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+
+}
+.veggies-slider-wrap{
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    margin-top: 20px;
+    margin-left: 20px;
+
+}
+
+.vegie-slider img{
+    
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    transition: width 2s, height 2s, transform 2s;
+
+    
+
+}
+
+.vegie-slider img:hover {
+    transform: scale(2);
+
+}
+
+.vegie-slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid white;
+    padding: 10px;
+}
+.vegie-slider p{
+    margin-top: 10px;
+}
+#veggies-title{
+    display: flex;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 20px;
+}
+.veggie-map-wrap img{
+    width: 250px;
+    height: 300px;
+    /* border: 2px solid black; */
+    border-radius :50%;;
+}
+ 
+
+.veggie-map-wrap{ 
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+ 
+.veggies-map{
+        border: 2px solid white;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        height: 400px;
+        margin-left: 50px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 30px;
+        margin-top: 20px;
+        border-radius: 2cm;
+        box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}

@@ -1,25 +1,37 @@
-import React from "react";
+import React, { useContext } from "react";
 import { data } from "./VeggiesData";
+
+import "./veggies.css";
+import { UserContext } from "../Context";
+import { useNavigate } from "react-router";
 export default function DisplayViggies() {
+  const { name, setName, search, setSearch } = useContext(UserContext);
+
+  const navigation = useNavigate();
+
   return (
     <>
-      <div className="displayFruits">
-        {data.map((items) => (
-          <>
+      <h1 id="veggies-title">Best Selling Veggies in Coimbatore!</h1>
+      <div className="veggie-map-wrap">
+        {data
+          .filter((items) => {
+            if (search === "") return items;
+            else if (
+              items.name.toLocaleLowerCase().includes(search.toLowerCase())
+            ) {
+              return items;
+            }
+          })
+          .map((items) => (
             <div
-              className="displayImageWrap"
+              className="veggies-map"
               key={items.id}
-              // onClick={() => {
-              //   navigation("/fruits/" + items.name.toLowerCase());
-              // }}
+              onClick={() => navigation("/veggies/" + items.name)}
             >
-              <img src={items.img} />
-              <div className="dipslay-image-text">
-                <h1>{items.name}</h1>
-              </div>
+              <img src={items.photo_url} />
+              <p>{items.name}</p>
             </div>
-          </>
-        ))}
+          ))}
       </div>
     </>
   );

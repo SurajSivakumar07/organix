@@ -5,9 +5,17 @@ import Login from "../Login/Login";
 import Signup from "../Signup/Signup";
 import { SearchContext, UserContext } from "../Context";
 import HambugerFruits from "./HambugerFruits";
+import Geocode from "react-geocode";
+
+import axios from "axios";
+import { useSelector } from "react-redux";
+import { LogoDevRounded } from "@mui/icons-material";
 
 export default function Nav() {
-  //searching
+  //location
+  const [currentAdd, SetAddress] = useState();
+  const [latitude, setLatitude] = useState();
+  const [longitude, setLongitude] = useState();
 
   //Trigger
   const [trigger, setTrigger] = useState(false);
@@ -17,15 +25,9 @@ export default function Nav() {
 
   //userContext
 
-  //orignal
-  // const [name, setName] = useContext(UserContext);
-
   const { name, setName, search, setSearch } = useContext(UserContext);
 
-  //search
-  // const [search, setSearch] = useContext(SearchContext);
-
-  // const [search, setSearch] = val2;
+  const loggedIn = useSelector((state) => state.isLoggedIn);
 
   const signinHandle = () => {
     setTrigger(true);
@@ -64,7 +66,7 @@ export default function Nav() {
                 placeholder="Search Here !"
                 onChange={searchHandler}
               />
-              <i class="fa-solid fa-magnifying-glass" id="serach-icon"></i>
+              {/* <i class="fa-solid fa-magnifying-glass" id="serach-icon"></i> */}
             </form>
           </div>
           {name ? (
@@ -82,8 +84,16 @@ export default function Nav() {
                 </Link>
               </h3>
               <h3>
+                <Link to="/contact" onClick={signupHandle}>
+                  Contact
+                </Link>
+              </h3>
+              <h3>
+                <a href="#summary">FAQ'S</a>
+              </h3>
+              <h3>
                 <Link to="/seller" onClick={signupHandle}>
-                  Seller
+                  Dealer
                 </Link>
               </h3>
             </div>

@@ -1,0 +1,12 @@
+.contact-wrap{
+    height: 100vh;
+}
+.content-content{
+    margin-top:15%;
+    border: 0.5px solid black;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

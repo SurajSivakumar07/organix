@@ -1,0 +1,22 @@
+footer{
+    background-color: rgb(252, 251, 249);
+     
+}
+.footer-wrap{
+    border: 2px solid beige;
+    /* padding: 20px; */
+}
+.footer-content{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.footer-content p{
+    margin-top: 10px;
+}
+.bottom{
+    border-top: 1px solid wheat;
+    padding: 40px;
+}

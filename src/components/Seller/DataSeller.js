@@ -5,21 +5,25 @@ export const sellerData = [
 
     fruits: [
       {
+        id: "1",
         name: "apple",
         price: 40,
         type: "Normal",
       },
       {
+        id: "2",
         name: "Strawberry",
         price: 60,
         type: "Normal",
       },
       {
+        id: "3",
         name: "Banana",
         price: 35,
         type: "Normal",
       },
       {
+        id: "4",
         name: "Pear",
         price: 90,
         type: "Normal",
