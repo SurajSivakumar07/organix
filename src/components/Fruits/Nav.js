@@ -42,6 +42,9 @@ export default function Nav() {
     setSearch(e.target.value);
   };
 
+  const loog = localStorage.getItem("isLoggedin");
+  console.log(loog);
+
   return (
     <>
       <div className="nav-wrap">
@@ -69,7 +72,7 @@ export default function Nav() {
               {/* <i class="fa-solid fa-magnifying-glass" id="serach-icon"></i> */}
             </form>
           </div>
-          {name ? (
+          {loog !== null ? (
             <HambugerFruits />
           ) : (
             <div className="Account">

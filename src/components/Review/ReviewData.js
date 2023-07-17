@@ -6,12 +6,12 @@ export const reviewData = [
   },
   {
     message: "Friendly service",
-    name: "Suraj",
+    name: "Sanjay",
     state: "TamilNadu",
   },
   {
     message: "Fresh and fastest delivery",
-    name: "Suraj",
+    name: "Swamy",
     state: "TamilNadu",
   },
   {

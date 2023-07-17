@@ -20,6 +20,9 @@
     box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
 
 }
+.review-slider h3{
+    font-family: cursive;
+}
 .review-main-wrap h1{
     display: flex;
     justify-content: center;

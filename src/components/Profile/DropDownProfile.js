@@ -20,6 +20,7 @@ export default function DropDownProfile() {
 
           <li
             onClick={() => {
+              localStorage.clear();
               window.location.reload();
               navigation("/fruits");
             }}

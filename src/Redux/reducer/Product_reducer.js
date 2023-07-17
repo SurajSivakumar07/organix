@@ -2,12 +2,18 @@
 
 import { ActionType } from "../constant/Action-type";
 
-const initialState = { product: [] };
+const initialState = {
+  product: [],
+  localStorage: [],
+};
 
 export const productReducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case ActionType.SET_PRODUCTS:
-      return { ...state, product: [...state.product, payload] };
+      const val = { ...state, product: [...state.product, payload] };
+      localStorage.setItem("items", JSON.stringify(val.product));
+      state.localStorage = JSON.parse(localStorage.getItem("items"));
+      return val;
     default:
       return state;
   }

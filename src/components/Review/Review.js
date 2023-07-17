@@ -10,9 +10,9 @@ export default function Review() {
         <div className="review-wrap">
           {reviewData.map((items) => (
             <div className="review-slider">
-              <h3>{items.message}</h3>
+              <h3>"{items.message}"</h3>
               <div className="review-text-wrap">
-                <p>{items.name}</p>
+                <p>-{items.name}</p>
               </div>
             </div>
           ))}

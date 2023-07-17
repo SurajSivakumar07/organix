@@ -20,6 +20,8 @@ export default function Signup(props) {
     dispatch(checkLogin(true));
 
     localStorage.setItem("name", user);
+
+    localStorage.setItem("isLoggedin", true);
   };
 
   const prod = useSelector((state) => state.isLoggedIn);

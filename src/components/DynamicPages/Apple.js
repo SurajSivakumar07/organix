@@ -10,6 +10,7 @@ import { UserContext } from "../Context";
 
 import { setProducts } from "../../Redux/actions/action";
 import { productReducer } from "../../Redux/reducer/Product_reducer";
+import { json } from "react-router";
 
 export default function Apple() {
   const arr = window.location.href.split("/");
@@ -55,6 +56,7 @@ export default function Apple() {
           if (compaare === 0) {
             fruitsDetail.push({
               fruit: sellerData[i].fruits[j].name,
+              id: sellerData[i].fruits[j].id,
               name: sellerData[i].name,
               price: sellerData[i].fruits[j].price,
               type: sellerData[i].fruits[j].type,
@@ -62,12 +64,17 @@ export default function Apple() {
           }
         }
       }
+
       setValue(fruitsDetail);
     }
     setInterval();
     // setLoding(true);
     setFinal(true);
   }, []);
+
+  const loog = localStorage.getItem("isLoggedin");
+  const prod = useSelector((state) => state.allProducts);
+  const [arr1, setArr1] = useState([]);
 
   return (
     <>
@@ -127,9 +134,14 @@ export default function Apple() {
                     <h4>Type:{items.type}</h4>
                     <div className="hidden-cart">
                       <button
+                        id="add_to_cart"
                         onClick={() => {
-                          if (isLoggedIn === false) alert("Need to sign in");
-                          else dispatch(setProducts(items));
+                          if (loog === null) alert("Need to sign in");
+                          else {
+                            dispatch(setProducts(items));
+
+                            setArr1(JSON.stringify([...arr1, items]));
+                          }
                           // setCart(items);
                         }}
                       >
