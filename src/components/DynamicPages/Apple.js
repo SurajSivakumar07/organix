@@ -11,6 +11,8 @@ import { UserContext } from "../Context";
 import { setProducts } from "../../Redux/actions/action";
 import { productReducer } from "../../Redux/reducer/Product_reducer";
 import { json } from "react-router";
+import { red } from "@mui/material/colors";
+import { useEffect } from "react";
 
 export default function Apple() {
   const arr = window.location.href.split("/");
@@ -23,54 +25,88 @@ export default function Apple() {
 
   const [slider, setSlider] = useState(true);
 
+  const [added, setAdded] = useState(true);
+
   const dispatch = useDispatch();
   let a;
 
   const isLoggedIn = useSelector((state) => state.isLoggedIn.isLoggedIn);
   console.log(isLoggedIn);
+
   const { name, setName, search, setSearch, cart, setCart, img, setImg } =
     useContext(UserContext);
+  // useEffect(() => {
+  //   async function getData() {
+  //     fetch("http://localhost:8080/")
+  //       .then((res) => res.json())
+  //       .then((dat) => {
+  //         dat.filter((items) => {
+  //           if (named.localeCompare(items.name.toLowerCase()) == false) {
+  //             fruitsDetail.push(items);
+  //           }
+  //         });
+  //       });
+  //     setValue(fruitsDetail);
+  //   }
 
-  useState(() => {
-    async function image() {
-      for (let i = 0; i < data.length; i++) {
-        const compaare = named.localeCompare(data[i].name.toLowerCase());
+  //   getData();
+  // }, []);
 
-        if (compaare === 0) {
-          a = data[i].img;
+  let dup = [];
+  useEffect(() => {
+    // async function image() {
+    //   for (let i = 0; i < data.length; i++) {
+    //     const compaare = named.localeCompare(data[i].name.toLowerCase());
 
-          setImg(a);
-          break;
-        }
-      }
+    //     if (compaare === 0) {
+    //       a = data[i].img;
+
+    //       setImg(a);
+    //       break;
+    //     }
+    //   }
+    // }
+    // image();
+
+    async function getData() {
+      fetch("http://localhost:8080/sellers")
+        .then((res) => res.json())
+        .then((dat) => {
+          dat.filter((items) => {
+            if (named.localeCompare(items.sellingType.toLowerCase()) == 0) {
+              setValue((old) => [...old, items]);
+              console.log(value);
+            }
+          });
+        });
     }
-    image();
+    // async function setInterval() {
+    //   for (let i = 0; i < sellerData.length; i++) {
+    //     let len = sellerData[i].fruits.length;
+    //     for (let j = 0; j < len; j++) {
+    //       const compaare = named.localeCompare(
+    //         sellerData[i].fruits[j].name.toLowerCase()
+    //         );
+    //         if (compaare === 0) {
+    //           fruitsDetail.push({
+    //             fruit: sellerData[i].fruits[j].name,
+    //             id: sellerData[i].fruits[j].id,
+    //             name: sellerData[i].name,
+    //             price: sellerData[i].fruits[j].price,
+    //             type: sellerData[i].fruits[j].type,
+    //           });
+    //         }
+    //       }
+    //     }
 
-    async function setInterval() {
-      for (let i = 0; i < sellerData.length; i++) {
-        let len = sellerData[i].fruits.length;
-        for (let j = 0; j < len; j++) {
-          const compaare = named.localeCompare(
-            sellerData[i].fruits[j].name.toLowerCase()
-          );
-          if (compaare === 0) {
-            fruitsDetail.push({
-              fruit: sellerData[i].fruits[j].name,
-              id: sellerData[i].fruits[j].id,
-              name: sellerData[i].name,
-              price: sellerData[i].fruits[j].price,
-              type: sellerData[i].fruits[j].type,
-            });
-          }
-        }
-      }
+    //   }
+    setValue(dup);
 
-      setValue(fruitsDetail);
-    }
-    setInterval();
+    getData();
     // setLoding(true);
     setFinal(true);
   }, []);
+  console.log(value);
 
   const loog = localStorage.getItem("isLoggedin");
   const prod = useSelector((state) => state.allProducts);
@@ -79,39 +115,7 @@ export default function Apple() {
   return (
     <>
       <Nav />
-
-      <div className="dynamic">
-        <div className="view-btn-wrap">
-          <div className="grid-view">
-            <i
-              class="fa-solid fa-box"
-              onClick={() => {
-                setSlider(true);
-              }}
-            ></i>
-          </div>
-          <div className="linear-view">
-            <i
-              class="fa-solid fa-boxes-stacked"
-              onClick={() => {
-                setSlider(false);
-              }}
-            ></i>
-          </div>
-        </div>
-
-        <div className="display-seller-no">
-          <p>Seller Details!</p>
-
-          <div className="no-seller">
-            {value.length >= 1 ? (
-              <p>Number of Sellers:{value.length}</p>
-            ) : (
-              <h1>Currently no seller's😕 </h1>
-            )}
-          </div>
-        </div>
-
+      <div className="seller-display-wrap">
         {final ? (
           <div
             className="seller-display-wrap"
@@ -128,24 +132,30 @@ export default function Apple() {
                     key={items.id}
                     style={{ marginTop: 10 }}
                   >
-                    <img src={img} />
+                    <img src={items.img} />
                     <h1>Seller Name:{items.name}</h1>
                     <h2>Price:{items.price}/kg</h2>
                     <h4>Type:{items.type}</h4>
+
                     <div className="hidden-cart">
                       <button
                         id="add_to_cart"
                         onClick={() => {
                           if (loog === null) alert("Need to sign in");
                           else {
-                            dispatch(setProducts(items));
+                            if (added === true) {
+                              dispatch(setProducts(items));
 
-                            setArr1(JSON.stringify([...arr1, items]));
+                              setArr1(JSON.stringify([...arr1, items]));
+                            } else {
+                              alert("Already added");
+                            }
                           }
+                          // setAdded(false);
                           // setCart(items);
                         }}
                       >
-                        Add
+                        {added ? "Add" : <p style={{ color: "red" }}>Added!</p>}
                       </button>
                     </div>
                   </div>

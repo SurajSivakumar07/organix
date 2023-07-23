@@ -2,7 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-x: hidden;
+     overflow-x: hidden; 
+}
+html{
+    scroll-behavior: smooth;
 }
 
 a{
@@ -11,3 +14,147 @@ a{
 .dynamic{
     height: 100vh;
 }
+
+@media only screen and (max-width: 600px) {
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        /* background-color: pink; */
+    }
+    input[type="text"] {
+        touch-action: manipulation;
+      }
+    .nav-content{
+        display: flex;
+        flex-direction: column;
+    }
+    .nav-content .Account{
+         font-size: 12px;
+    }
+    .nav-content .title{
+        text-align: center;
+    }
+    #location{
+        width: 80px;
+    }
+    .searchBar i{
+        display: none;
+    }
+    .Account{
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Sliders */
+    
+
+    .slider-wrap .slider-content,.Slider-text {
+        /* background-color: black; */
+        display: none;
+        /* grid-template-columns: auto auto; */
+    }
+    .slider-wrap img{
+        width: 30%;
+        height: 30%;
+    }
+    .slider-content img{
+        max-width: 50%;
+        width: 50%;
+    }
+    /* displayfruits */
+
+
+
+    .display-main .displayFruits{
+        display: grid;
+        grid-template-columns: auto auto;
+        margin-left: 2%; 
+         
+    }
+    .display-main .displayFruits .displayImageWrap{
+        width: 90%;
+        
+    }
+    .display-main .displayFruits .displayImageWrap img{
+        width:150px;
+        height: 160px;
+        
+    }
+     .dipslay-image-text h1
+    {
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Poppins', sans-serif;   
+    }
+    .display-main {
+        font-size: 10px;
+    }
+
+
+    /* locatoin */
+    .main-location-wrap{
+        display: none;
+    }
+
+    /* .dynamic */
+    .dynamic .grid-view , .linear-view{
+        display: none;
+    }
+    .display-seller-no .no-seller{
+        font-size: 15px;
+    }
+
+    .display-seller-no  p{
+        font-size: 15px;
+
+    }
+
+    .seller-display-wrap .display-sellers-wrap img{
+        width: 80%;
+        height: 70%;
+    }
+    .seller-display-wrap .display-sellers-wrap{
+        height: 430px;
+        width: 300px;
+        font-size: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+       
+    }
+    .seller-display-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    /* Login and signup */
+
+    .login{
+        right: 7%;
+        top: auto; 
+        width: 300px;
+        height: 340px;
+    }
+    .fromInput{
+        margin-top:1px;
+    }
+    .fromInput input{
+        width: 200px;
+    }
+
+    /* veggie */
+    .veggies-slider-wrap .vegie-slider ,#veggie-top{
+        display: none;
+    }
+    .veggie-map-wrap{
+        display: grid;
+        grid-template-rows: auto auto;
+    }
+  }

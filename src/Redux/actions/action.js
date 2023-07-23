@@ -20,3 +20,17 @@ export const checkLogin = (product) => {
     payload: product,
   };
 };
+
+export const displayFruitsAction = (product) => {
+  return {
+    type: ActionType.DISPLAY_FRUITS,
+    payload: product,
+  };
+};
+
+export const displayVeggiesAction = (product) => {
+  return {
+    type: ActionType.DISPLAY_VEGGIES,
+    payload: product,
+  };
+};

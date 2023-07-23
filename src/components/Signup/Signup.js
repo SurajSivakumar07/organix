@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { UserContext } from "../Context";
 import { useDispatch, useSelector } from "react-redux";
 import { checkLogin } from "../../Redux/actions/action";
+import axios from "axios";
 
 // import "./login.css"
 export default function Signup(props) {
@@ -14,14 +15,32 @@ export default function Signup(props) {
 
   const dispatch = useDispatch();
 
+  const [namedup, setNameDup] = useState();
+
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+
   const signupHandler = (e) => {
     e.preventDefault();
-    setName(true);
-    dispatch(checkLogin(true));
 
-    localStorage.setItem("name", user);
+    axios
+      .post("http://localhost:8080/api/v1/auth/register", {
+        name: namedup,
+        email: email,
+        password: password,
+      })
+      .then((res) => {
+        if (res.status === 200) {
+          setName(true);
+          dispatch(checkLogin(true));
 
-    localStorage.setItem("isLoggedin", true);
+          localStorage.setItem("name", user);
+
+          localStorage.setItem("isLoggedin", true);
+
+          props.Trigger(false);
+        }
+      });
   };
 
   const prod = useSelector((state) => state.isLoggedIn);
@@ -42,13 +61,25 @@ export default function Signup(props) {
             type="text"
             placeholder="Enter your Name"
             onChange={(e) => {
+              setNameDup(e.target.value);
               setUser(e.target.value);
             }}
+            required
           />
 
-          <input type="email" placeholder="Enter your email" />
+          <input
+            type="email"
+            placeholder="Enter your email"
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
           <br></br>
-          <input type="password" placeholder="Enter your password" />
+          <input
+            type="password"
+            placeholder="Enter your password"
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
           <br></br>
 
           <input type="submit" id="login-btn" />

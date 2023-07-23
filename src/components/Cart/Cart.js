@@ -6,8 +6,7 @@ import { useContext } from "react";
 import { UserContext } from "../Context";
 
 import "./cart.css";
-import { Height, Satellite } from "@mui/icons-material";
-import { prettyDOM } from "@testing-library/react";
+import { Subject } from "@mui/icons-material";
 
 export default function Cart() {
   const [data, setData] = useState([]);
@@ -35,9 +34,24 @@ export default function Cart() {
     // console.log(arrCart[0]);
 
     setCartArr(JSON.parse(localStorage.getItem("items")));
+
+    totalPrice();
   }, []);
   console.log(arrCart);
+  const [quantity, setQuantity] = useState(1);
+  //totalPrice
 
+  const [price, setPrice] = useState();
+  const totalPrice = () => {
+    let sum = 0;
+    for (let i = 0; i < arrCart.length; i++) {
+      sum += arrCart[0].price;
+
+      console.log(sum);
+    }
+
+    setPrice(sum);
+  };
   return (
     <>
       <Nav />
@@ -69,12 +83,33 @@ export default function Cart() {
             </div>
           ) : (
             <div className="cart-wrap">
+              <p>TotalPrice :{price}</p>
               {arrCart.map((items) => (
                 <div className="display-sellers-wrap" key={items.id} id="test">
+                  <img src={items.img} />
                   <h1>Fruis:{items.fruit}</h1>
                   <h1>Seller Name:{items.name}</h1>
                   <h2>Price:{items.price}/kg</h2>
                   <h4>Type:{items.type}</h4>
+                  <div className="qunatity">
+                    <p>
+                      <i
+                        class="fa-solid fa-minus"
+                        onClick={() => {
+                          setQuantity(quantity - 1);
+                        }}
+                      ></i>
+                    </p>
+                    <h1>{quantity}</h1>
+                    <p>
+                      <i
+                        class="fa-solid fa-plus"
+                        onClick={() => {
+                          setQuantity(quantity + 1);
+                        }}
+                      ></i>
+                    </p>
+                  </div>
 
                   <div className="hidden-cart">
                     <button

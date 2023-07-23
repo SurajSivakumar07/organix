@@ -1,8 +1,5 @@
 /* button  */
  
-.seller-display-wrap{
-    height: 100vh;
-}
 .view-btn-wrap {
     display: flex;
     font-size: 40px;
@@ -87,4 +84,17 @@
     display: flex;
     justify-content: space-around;
     flex-direction: column;
+}
+
+.qunatity{
+    display: flex;
+    border: 2px solid white;
+    padding: 2px;
+}
+
+.qunatity p{
+    margin-left: 20px;
+}
+.qunatity h1{
+    margin-left: 10px;
 }

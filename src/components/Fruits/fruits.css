@@ -138,9 +138,11 @@
 /* Sliders */
  
 .slider-wrap{
-    display: flex;
-    justify-content: space-evenly;
+    display: flex; 
+     justify-content: space-evenly;
     /* height: 60vh; */
+    /* display: grid; */
+    /* grid-template-columns: auto auto auto auto; */
 
 }
 
@@ -206,7 +208,8 @@
 }
  .displayFruits{
     display: grid;
-    grid-template-columns: auto auto  auto auto ;
+    grid-template-columns: repeat(4,1fr);
+    /* grid-template-columns: auto auto  auto auto ; */
     border: 2px solid white;
     /* padding: 5px; */
     width: 100%;
@@ -243,7 +246,10 @@
  .dipslay-image-text p {
      margin-left: 20px;
  }
-
+ .display-main{
+    height: 100vh;
+ }
+ 
 /* Hambuger */
 .hambuger-wrap{
     border: 1px solid white;

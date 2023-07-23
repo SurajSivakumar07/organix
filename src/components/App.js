@@ -16,8 +16,15 @@ import DynamicVeg from "./DynamicPages/DynamicVeg";
 import Footer from "./Footer/Footer";
 import { useDispatch, useSelector } from "react-redux";
 import { data } from "./Fruits/FruitsData";
-import { setProducts } from "../Redux/actions/action";
+import {
+  displayFruits,
+  displayFruitsAction,
+  setProducts,
+} from "../Redux/actions/action";
 import Contact from "./Contact/Contact";
+import axios from "axios";
+import Demo from "../Demo";
+import SellerForm from "./Seller/SellerForm";
 
 export default function App() {
   const [name, setName] = useState(false);
@@ -35,19 +42,24 @@ export default function App() {
     img: img,
     setImg: setImg,
   };
-
   const dispatch = useDispatch();
+  // useEffect(() => {
+  //   axios
+  //     .get("http://localhost:8080/")
+  //     .then((res) => dispatch(displayFruitsAction(res)));
+  // }, []);
 
-  const prod = useSelector((state) => state);
+  const prod = useSelector((state) => state.displayFruits);
+
+  console.log(prod);
 
   return (
     <>
-      {/* <UserContext.Provider value={[name, setName]}> */}
       <UserContext.Provider value={routingDetail}>
         <Routes>
           <Route path="/sigin" element={<Login />} />
           <Route path="/" element={<FrontPage />} />
-          <Route path="/seller" element={<HomeSeller />} />
+          <Route path="/seller" element={<SellerForm />} />
           <Route path="/seller/signup" element={<SellerSignup />} />
 
           <Route path="/fruits" element={<Fruits />} />
@@ -58,6 +70,7 @@ export default function App() {
 
           <Route path="/cart" element={<Cart />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/demo" element={<Demo />} />
         </Routes>
         <Footer />
       </UserContext.Provider>
