@@ -38,27 +38,7 @@ export default function DisplayViggies() {
   return (
     <>
       <h1 id="veggies-title">Best Selling Veggies in Coimbatore!</h1>
-      {/* <div className="veggie-map-wrap">
-        {prod
-          .filter((items) => {
-            if (search === "") return items;
-            else if (
-              items.name.toLocaleLowerCase().includes(search.toLowerCase())
-            ) {
-              return items;
-            }
-          })
-          .map((items) => (
-            <div
-              className="veggies-map"
-              key={items.id}
-              onClick={() => navigation("/veggies/" + items.name)}
-            >
-              <img src={items.photo_url} />
-              <p>{items.name}</p>
-            </div>
-          ))}
-      </div> */}
+
       <div className="veggie-map-wrap">
         {prod
           .filter((items) => {

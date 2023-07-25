@@ -19,7 +19,6 @@ export default function Apple() {
   const named = arr[arr.length - 1].toLowerCase();
   const [loding, setLoding] = useState(true);
 
-  const fruitsDetail = [];
   const [final, setFinal] = useState(false);
   const [value, setValue] = useState([]);
 
@@ -28,46 +27,12 @@ export default function Apple() {
   const [added, setAdded] = useState(true);
 
   const dispatch = useDispatch();
-  let a;
 
   const isLoggedIn = useSelector((state) => state.isLoggedIn.isLoggedIn);
   console.log(isLoggedIn);
 
-  const { name, setName, search, setSearch, cart, setCart, img, setImg } =
-    useContext(UserContext);
-  // useEffect(() => {
-  //   async function getData() {
-  //     fetch("http://localhost:8080/")
-  //       .then((res) => res.json())
-  //       .then((dat) => {
-  //         dat.filter((items) => {
-  //           if (named.localeCompare(items.name.toLowerCase()) == false) {
-  //             fruitsDetail.push(items);
-  //           }
-  //         });
-  //       });
-  //     setValue(fruitsDetail);
-  //   }
-
-  //   getData();
-  // }, []);
-
   let dup = [];
   useEffect(() => {
-    // async function image() {
-    //   for (let i = 0; i < data.length; i++) {
-    //     const compaare = named.localeCompare(data[i].name.toLowerCase());
-
-    //     if (compaare === 0) {
-    //       a = data[i].img;
-
-    //       setImg(a);
-    //       break;
-    //     }
-    //   }
-    // }
-    // image();
-
     async function getData() {
       fetch("http://localhost:8080/sellers")
         .then((res) => res.json())
@@ -82,26 +47,7 @@ export default function Apple() {
           });
         });
     }
-    // async function setInterval() {
-    //   for (let i = 0; i < sellerData.length; i++) {
-    //     let len = sellerData[i].fruits.length;
-    //     for (let j = 0; j < len; j++) {
-    //       const compaare = named.localeCompare(
-    //         sellerData[i].fruits[j].name.toLowerCase()
-    //         );
-    //         if (compaare === 0) {
-    //           fruitsDetail.push({
-    //             fruit: sellerData[i].fruits[j].name,
-    //             id: sellerData[i].fruits[j].id,
-    //             name: sellerData[i].name,
-    //             price: sellerData[i].fruits[j].price,
-    //             type: sellerData[i].fruits[j].type,
-    //           });
-    //         }
-    //       }
-    //     }
 
-    //   }
     setValue(dup);
 
     getData();
