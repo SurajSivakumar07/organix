@@ -2,10 +2,26 @@ import * as React from "react";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
+import axios from "axios";
 
 import { Button } from "@mui/material";
 
 export default function ContactDetails() {
+  const [name, setName] = React.useState("");
+  const [firstName, setFirstName] = React.useState("");
+  const [mobile, setMobile] = React.useState("");
+  const [city, setCity] = React.useState("");
+
+  const formHandler = (e) => {
+    e.preventDefault();
+    axios
+      .post("http://localhost:8081/contact", {
+        name: name + firstName,
+        email: mobile,
+        description: city,
+      })
+      .then((res) => alert("Data Added !"));
+  };
   return (
     <React.Fragment>
       <Typography variant="h6" gutterBottom>
@@ -21,6 +37,7 @@ export default function ContactDetails() {
             fullWidth
             autoComplete="given-name"
             variant="standard"
+            onChange={(e) => setName(e.target.value)}
           />
         </Grid>
         <Grid item xs={12} sm={6}>
@@ -32,6 +49,7 @@ export default function ContactDetails() {
             fullWidth
             autoComplete="family-name"
             variant="standard"
+            onChange={(e) => setFirstName(e.target.value)}
           />
         </Grid>
         <Grid item xs={12}>
@@ -39,10 +57,11 @@ export default function ContactDetails() {
             required
             id="address1"
             name="address1"
-            label="Mobile "
+            label="email "
             fullWidth
             autoComplete="shipping address-line1"
             variant="standard"
+            onChange={(e) => setMobile(e.target.value)}
           />
         </Grid>
 
@@ -55,40 +74,16 @@ export default function ContactDetails() {
             fullWidth
             autoComplete="shipping address-level2"
             variant="standard"
+            onChange={(e) => setCity(e.target.value)}
           />
         </Grid>
-        <Grid item xs={12} sm={6}>
-          <TextField
-            id="state"
-            name="state"
-            label="State/Province/Region"
-            fullWidth
-            variant="standard"
-          />
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <TextField
-            required
-            id="zip"
-            name="zip"
-            label="Zip / Postal code"
-            fullWidth
-            autoComplete="shipping postal-code"
-            variant="standard"
-          />
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <TextField
-            required
-            id="country"
-            name="country"
-            label="Country"
-            fullWidth
-            autoComplete="shipping country"
-            variant="standard"
-          />
-        </Grid>
-        <Button variant="contained" disableElevation style={{ marginTop: 40 }}>
+
+        <Button
+          variant="contained"
+          disableElevation
+          style={{ marginTop: 40 }}
+          onClick={formHandler}
+        >
           Submit
         </Button>
       </Grid>

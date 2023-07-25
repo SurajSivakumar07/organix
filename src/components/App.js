@@ -25,6 +25,7 @@ import Contact from "./Contact/Contact";
 import axios from "axios";
 import Demo from "../Demo";
 import SellerForm from "./Seller/SellerForm";
+import ReviewForm from "./Review/ReviewForm";
 
 export default function App() {
   const [name, setName] = useState(false);
@@ -70,7 +71,7 @@ export default function App() {
 
           <Route path="/cart" element={<Cart />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/demo" element={<Demo />} />
+          <Route path="/demo" element={<ReviewForm />} />
         </Routes>
         <Footer />
       </UserContext.Provider>
