@@ -1,0 +1,20 @@
+
+.from-dealer-wrap{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+}
+
+.from-dealer-wrap input[type="submit"]{
+        
+
+      
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+}

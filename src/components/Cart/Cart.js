@@ -87,11 +87,11 @@ export default function Cart() {
               {arrCart.map((items) => (
                 <div className="display-sellers-wrap" key={items.id} id="test">
                   <img src={items.img} />
-                  <h1>Fruis:{items.fruit}</h1>
+                  <h1>Fruis:{items.sellingType}</h1>
                   <h1>Seller Name:{items.name}</h1>
                   <h2>Price:{items.price}/kg</h2>
-                  <h4>Type:{items.type}</h4>
-                  <div className="qunatity">
+                  {/* <h4>Type:{items.type}</h4> */}
+                  {/* <div className="qunatity">
                     <p>
                       <i
                         class="fa-solid fa-minus"
@@ -109,7 +109,7 @@ export default function Cart() {
                         }}
                       ></i>
                     </p>
-                  </div>
+                  </div> */}
 
                   <div className="hidden-cart">
                     <button

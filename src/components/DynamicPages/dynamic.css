@@ -11,7 +11,11 @@
     margin-left: 90px;
     cursor: pointer;
 }
-
+.whole-wrap-dynamics{
+    height: 100vh;
+    margin-top: 10%;
+}
+ 
 .display-sellers-wrap{
     border: 2px solid black;
     /* background-color: yellow; */
@@ -25,6 +29,10 @@
     box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
      padding: 20px; 
     font-family: 'Poppins', sans-serif;
+
+    margin: auto;
+     
+   
 
 }
 .display-seller-no{
