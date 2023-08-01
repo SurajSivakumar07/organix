@@ -19,6 +19,18 @@ export default function Signup(props) {
 
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
+  const getId = () => {
+    axios.get("http://localhost:8080/api/v1/auth/details").then((res) => {
+      res.data.filter((items) => {
+        if (items.email.includes(email)) {
+          console.log(res);
+          localStorage.setItem("userId", items.id);
+          dispatch(checkLogin(true));
+          localStorage.setItem("isLoggedin", true);
+        }
+      });
+    });
+  };
 
   const signupHandler = (e) => {
     e.preventDefault();
@@ -39,11 +51,10 @@ export default function Signup(props) {
           localStorage.setItem("isLoggedin", true);
 
           props.Trigger(false);
+          getId();
         }
       });
   };
-
-  const prod = useSelector((state) => state.isLoggedIn);
 
   return props.trigger ? (
     <>

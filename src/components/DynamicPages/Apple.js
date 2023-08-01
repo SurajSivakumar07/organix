@@ -1,18 +1,18 @@
 import React, { useContext, useState } from "react";
-import { sellerData } from "../Seller/DataSeller";
 
 import { data } from "../Fruits/FruitsData";
 import "./dynamic.css";
 import Nav from "../Fruits/Nav";
 import Slider from "../Fruits/Slider";
 import { useDispatch, useSelector } from "react-redux";
-import { UserContext } from "../Context";
+import "react-toastify/dist/ReactToastify.css";
 
-import { setProducts } from "../../Redux/actions/action";
-import { productReducer } from "../../Redux/reducer/Product_reducer";
-import { json } from "react-router";
-import { red } from "@mui/material/colors";
+import { ToastContainer, toast } from "react-toastify";
+import IconButton from "@mui/material/IconButton";
+
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import { useEffect } from "react";
+import { addTocart } from "./addtoCartBackend";
 
 export default function Apple() {
   const arr = window.location.href.split("/");
@@ -25,6 +25,8 @@ export default function Apple() {
   const [slider, setSlider] = useState(true);
 
   const [added, setAdded] = useState(true);
+
+  const [qty, setQty] = useState(1);
 
   const dispatch = useDispatch();
 
@@ -39,7 +41,10 @@ export default function Apple() {
         .then((dat) => {
           dat.filter((items) => {
             if (data.length != 0) {
-              if (named.localeCompare(items.sellingType.toLowerCase()) == 0) {
+              if (
+                items.sellingType &&
+                named.localeCompare(items.sellingType.toLowerCase()) == 0
+              ) {
                 setValue((old) => [...old, items]);
                 console.log(value);
               }
@@ -57,13 +62,13 @@ export default function Apple() {
   console.log(value);
 
   const loog = localStorage.getItem("isLoggedin");
-  const prod = useSelector((state) => state.allProducts);
+
   const [arr1, setArr1] = useState([]);
 
   return (
     <>
       <Nav />
-
+      <ToastContainer />
       <div className="whole-wrap-dynamics">
         <div className="seller-display-wrap">
           {value.length > 0 ? (
@@ -85,8 +90,8 @@ export default function Apple() {
                       <img src={items.img} />
                       <h1>Seller Name:{items.name}</h1>
                       <h2>Price:{items.price}/kg</h2>
-                      <h4>Type:{items.type}</h4>
 
+                      {/* </FormControl> */}
                       <div className="hidden-cart">
                         <button
                           id="add_to_cart"
@@ -94,19 +99,30 @@ export default function Apple() {
                             if (loog === null) alert("Need to sign in");
                             else {
                               if (added === true) {
-                                dispatch(setProducts(items));
-
                                 setArr1(JSON.stringify([...arr1, items]));
+
+                                addTocart(items.id, items.price * qty);
+
+                                toast.success("Success Notification !", {
+                                  position: toast.POSITION.TOP_RIGHT,
+                                });
                               } else {
                                 alert("Already added");
                               }
                             }
+
                             // setAdded(false);
                             // setCart(items);
                           }}
                         >
                           {added ? (
-                            "Add"
+                            <IconButton
+                              color="primary"
+                              aria-label="add to shopping cart"
+                              style={{ height: 20 }}
+                            >
+                              <AddShoppingCartIcon />
+                            </IconButton>
                           ) : (
                             <p style={{ color: "red" }}>Added!</p>
                           )}

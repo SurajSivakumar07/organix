@@ -26,6 +26,7 @@ import axios from "axios";
 import Demo from "../Demo";
 import SellerForm from "./Seller/SellerForm";
 import ReviewForm from "./Review/ReviewForm";
+import Checkout from "./Checkout/Checkout";
 
 export default function App() {
   const [name, setName] = useState(false);
@@ -71,7 +72,7 @@ export default function App() {
 
           <Route path="/cart" element={<Cart />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/demo" element={<ReviewForm />} />
+          <Route path="/checkout" element={<Checkout />} />
         </Routes>
         <Footer />
       </UserContext.Provider>

@@ -19,7 +19,7 @@
 .display-sellers-wrap{
     border: 2px solid black;
     /* background-color: yellow; */
-    height: 490px;
+    height: 530px;
     width: 350px;
   
     display: flex;
@@ -105,4 +105,13 @@
 }
 .qunatity h1{
     margin-left: 10px;
+}
+
+
+
+
+/* quantity */
+
+.display-sellers-wrap option{
+    margin-top: 10px;
 }

@@ -1,5 +1,6 @@
 .cart-wrap {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -16,4 +17,16 @@
 }
 .main-cart{
     height: 100vh;
+}
+.main-cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+     
+}
+
+.check-out{
+    margin-left: 150px;
+    font-family: cursive;
 }

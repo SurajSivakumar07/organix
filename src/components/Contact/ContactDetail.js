@@ -20,7 +20,7 @@ export default function ContactDetails() {
         email: mobile,
         description: city,
       })
-      .then((res) => alert("Data Added !"));
+      .then((res) => alert("Our team will contact soon !"));
   };
   return (
     <React.Fragment>

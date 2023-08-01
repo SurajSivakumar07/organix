@@ -1,0 +1,12 @@
+.check-out-main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#check-out-text{
+    
+    text-align: center;
+    font-family: cursive;
+}

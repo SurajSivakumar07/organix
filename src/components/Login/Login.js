@@ -19,11 +19,11 @@ export default function Login(props) {
   const getName = () => {
     axios.get("http://localhost:8080/api/v1/auth/details").then((res) => {
       res.data.filter((items) => {
-        // if (email.localeCompare(items.email)) {
-
         if (items.email.includes(email)) {
           console.log(res);
           localStorage.setItem("name", items.name);
+
+          localStorage.setItem("userId", items.id);
           dispatch(checkLogin(true));
           localStorage.setItem("isLoggedin", true);
         }
